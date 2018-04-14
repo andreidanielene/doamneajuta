@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root" type="rootType"/>
+  <xs:complexType name="goalsAwayTeamType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="null" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="rootType">
+    <xs:sequence>
+      <xs:element type="_linksType" name="_links"/>
+      <xs:element type="xs:string" name="count"/>
+      <xs:element type="fixturesType" name="fixtures"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="awayTeamType">
+    <xs:sequence>
+      <xs:element name="href">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="http://api.football-data.org/v1/teams/104"/>
+            <xs:enumeration value="http://api.football-data.org/v1/teams/102"/>
+            <xs:enumeration value="http://api.football-data.org/v1/teams/109"/>
+            <xs:enumeration value="http://api.football-data.org/v1/teams/110"/>
+            <xs:enumeration value="http://api.football-data.org/v1/teams/471"/>
+            <xs:enumeration value="http://api.football-data.org/v1/teams/115"/>
+            <xs:enumeration value="http://api.football-data.org/v1/teams/107"/>
+            <xs:enumeration value="http://api.football-data.org/v1/teams/103"/>
+            <xs:enumeration value="http://api.football-data.org/v1/teams/106"/>
+            <xs:enumeration value="http://api.football-data.org/v1/teams/98"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="goalsHomeTeamType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="null" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="competitionType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="href"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="homeTeamType">
+    <xs:sequence>
+      <xs:element name="href">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="http://api.football-data.org/v1/teams/108"/>
+            <xs:enumeration value="http://api.football-data.org/v1/teams/1106"/>
+            <xs:enumeration value="http://api.football-data.org/v1/teams/472"/>
+            <xs:enumeration value="http://api.football-data.org/v1/teams/99"/>
+            <xs:enumeration value="http://api.football-data.org/v1/teams/450"/>
+            <xs:enumeration value="http://api.football-data.org/v1/teams/113"/>
+            <xs:enumeration value="http://api.football-data.org/v1/teams/100"/>
+            <xs:enumeration value="http://api.football-data.org/v1/teams/584"/>
+            <xs:enumeration value="http://api.football-data.org/v1/teams/1107"/>
+            <xs:enumeration value="http://api.football-data.org/v1/teams/586"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="selfType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="href"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="oddsType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="null" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="resultType">
+    <xs:sequence>
+      <xs:element type="goalsAwayTeamType" name="goalsAwayTeam"/>
+      <xs:element type="goalsHomeTeamType" name="goalsHomeTeam"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="elementType">
+    <xs:sequence>
+      <xs:element type="_linksType" name="_links"/>
+      <xs:element name="awayTeamName">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Cagliari Calcio"/>
+            <xs:enumeration value="Atalanta BC"/>
+            <xs:enumeration value="Juventus Turin"/>
+            <xs:enumeration value="SS Lazio"/>
+            <xs:enumeration value="US Sassuolo Calcio"/>
+            <xs:enumeration value="Udinese Calcio"/>
+            <xs:enumeration value="Genoa CFC"/>
+            <xs:enumeration value="Bologna FC"/>
+            <xs:enumeration value="AC Chievo Verona"/>
+            <xs:enumeration value="AC Milan"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="date">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="2018-04-17T18:45:00Z"/>
+            <xs:enumeration value="2018-04-18T16:00:00Z"/>
+            <xs:enumeration value="2018-04-18T18:45:00Z"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="homeTeamName">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="FC Internazionale Milano"/>
+            <xs:enumeration value="Benevento Calcio"/>
+            <xs:enumeration value="FC Crotone"/>
+            <xs:enumeration value="ACF Fiorentina"/>
+            <xs:enumeration value="Hellas Verona FC"/>
+            <xs:enumeration value="SSC Napoli"/>
+            <xs:enumeration value="AS Roma"/>
+            <xs:enumeration value="UC Sampdoria"/>
+            <xs:enumeration value="SPAL Ferrara"/>
+            <xs:enumeration value="Torino FC"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:string" name="matchday"/>
+      <xs:element type="oddsType" name="odds"/>
+      <xs:element type="resultType" name="result"/>
+      <xs:element type="xs:string" name="status"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="fixturesType">
+    <xs:sequence>
+      <xs:element type="elementType" name="element" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="_linksType">
+    <xs:sequence>
+      <xs:element type="awayTeamType" name="awayTeam" minOccurs="0"/>
+      <xs:element type="competitionType" name="competition"/>
+      <xs:element type="homeTeamType" name="homeTeam" minOccurs="0"/>
+      <xs:element type="selfType" name="self"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
