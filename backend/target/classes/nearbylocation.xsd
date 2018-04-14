@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="PlaceSearchResponse" type="PlaceSearchResponseType"/>
+  <xs:complexType name="southwestType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="lat"/>
+      <xs:element type="xs:string" name="lng"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="viewportType">
+    <xs:sequence>
+      <xs:element type="southwestType" name="southwest"/>
+      <xs:element type="northeastType" name="northeast"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="northeastType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="lat"/>
+      <xs:element type="xs:string" name="lng"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PlaceSearchResponseType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="status"/>
+      <xs:element type="resultType" name="result" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element type="xs:string" name="next_page_token"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="photoType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="photo_reference"/>
+      <xs:element type="xs:string" name="width"/>
+      <xs:element type="xs:string" name="height"/>
+      <xs:element type="xs:string" name="html_attribution"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="locationType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="lat"/>
+      <xs:element type="xs:string" name="lng"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="opening_hoursType">
+    <xs:sequence>
+      <xs:element name="open_now">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="true"/>
+            <xs:enumeration value="false"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="resultType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="name"/>
+      <xs:element type="xs:string" name="vicinity"/>
+      <xs:element type="xs:string" name="type" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element type="geometryType" name="geometry"/>
+      <xs:element type="xs:string" name="rating" minOccurs="0"/>
+      <xs:element name="icon">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png"/>
+            <xs:enumeration value="https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png"/>
+            <xs:enumeration value="https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png"/>
+            <xs:enumeration value="https://maps.gstatic.com/mapfiles/place_api/icons/bar-71.png"/>
+            <xs:enumeration value="https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png"/>
+            <xs:enumeration value="https://maps.gstatic.com/mapfiles/place_api/icons/doctor-71.png"/>
+            <xs:enumeration value="https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png"/>
+            <xs:enumeration value="https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:string" name="reference"/>
+      <xs:element type="xs:string" name="id"/>
+      <xs:element type="opening_hoursType" name="opening_hours" minOccurs="0"/>
+      <xs:element type="photoType" name="photo" minOccurs="0"/>
+      <xs:element type="xs:string" name="place_id"/>
+      <xs:element type="xs:string" name="scope"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="geometryType">
+    <xs:sequence>
+      <xs:element type="locationType" name="location"/>
+      <xs:element type="viewportType" name="viewport"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

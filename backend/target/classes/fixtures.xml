@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <_links>
+        <competition>
+            <href>http://api.football-data.org/v1/competitions/456</href>
+        </competition>
+        <self>
+            <href>http://api.football-data.org/v1/competitions/456/fixtures</href>
+        </self>
+    </_links>
+    <count>10</count>
+    <fixtures>
+        <element>
+            <_links>
+                <awayTeam>
+                    <href>http://api.football-data.org/v1/teams/104</href>
+                </awayTeam>
+                <competition>
+                    <href>http://api.football-data.org/v1/competitions/456</href>
+                </competition>
+                <homeTeam>
+                    <href>http://api.football-data.org/v1/teams/108</href>
+                </homeTeam>
+                <self>
+                    <href>http://api.football-data.org/v1/fixtures/163584</href>
+                </self>
+            </_links>
+            <awayTeamName>Cagliari Calcio</awayTeamName>
+            <date>2018-04-17T18:45:00Z</date>
+            <homeTeamName>FC Internazionale Milano</homeTeamName>
+            <matchday>33</matchday>
+            <odds null="true" />
+            <result>
+                <goalsAwayTeam null="true" />
+                <goalsHomeTeam null="true" />
+            </result>
+            <status>TIMED</status>
+        </element>
+        <element>
+            <_links>
+                <awayTeam>
+                    <href>http://api.football-data.org/v1/teams/102</href>
+                </awayTeam>
+                <competition>
+                    <href>http://api.football-data.org/v1/competitions/456</href>
+                </competition>
+                <homeTeam>
+                    <href>http://api.football-data.org/v1/teams/1106</href>
+                </homeTeam>
+                <self>
+                    <href>http://api.football-data.org/v1/fixtures/163580</href>
+                </self>
+            </_links>
+            <awayTeamName>Atalanta BC</awayTeamName>
+            <date>2018-04-18T16:00:00Z</date>
+            <homeTeamName>Benevento Calcio</homeTeamName>
+            <matchday>33</matchday>
+            <odds null="true" />
+            <result>
+                <goalsAwayTeam null="true" />
+                <goalsHomeTeam null="true" />
+            </result>
+            <status>TIMED</status>
+        </element>
+        <element>
+            <_links>
+                <awayTeam>
+                    <href>http://api.football-data.org/v1/teams/109</href>
+                </awayTeam>
+                <competition>
+                    <href>http://api.football-data.org/v1/competitions/456</href>
+                </competition>
+                <homeTeam>
+                    <href>http://api.football-data.org/v1/teams/472</href>
+                </homeTeam>
+                <self>
+                    <href>http://api.football-data.org/v1/fixtures/163581</href>
+                </self>
+            </_links>
+            <awayTeamName>Juventus Turin</awayTeamName>
+            <date>2018-04-18T18:45:00Z</date>
+            <homeTeamName>FC Crotone</homeTeamName>
+            <matchday>33</matchday>
+            <odds null="true" />
+            <result>
+                <goalsAwayTeam null="true" />
+                <goalsHomeTeam null="true" />
+            </result>
+            <status>TIMED</status>
+        </element>
+        <element>
+            <_links>
+                <awayTeam>
+                    <href>http://api.football-data.org/v1/teams/110</href>
+                </awayTeam>
+                <competition>
+                    <href>http://api.football-data.org/v1/competitions/456</href>
+                </competition>
+                <homeTeam>
+                    <href>http://api.football-data.org/v1/teams/99</href>
+                </homeTeam>
+                <self>
+                    <href>http://api.football-data.org/v1/fixtures/163582</href>
+                </self>
+            </_links>
+            <awayTeamName>SS Lazio</awayTeamName>
+            <date>2018-04-18T18:45:00Z</date>
+            <homeTeamName>ACF Fiorentina</homeTeamName>
+            <matchday>33</matchday>
+            <odds null="true" />
+            <result>
+                <goalsAwayTeam null="true" />
+                <goalsHomeTeam null="true" />
+            </result>
+            <status>TIMED</status>
+        </element>
+        <element>
+            <_links>
+                <awayTeam>
+                    <href>http://api.football-data.org/v1/teams/471</href>
+                </awayTeam>
+                <competition>
+                    <href>http://api.football-data.org/v1/competitions/456</href>
+                </competition>
+                <homeTeam>
+                    <href>http://api.football-data.org/v1/teams/450</href>
+                </homeTeam>
+                <self>
+                    <href>http://api.football-data.org/v1/fixtures/163583</href>
+                </self>
+            </_links>
+            <awayTeamName>US Sassuolo Calcio</awayTeamName>
+            <date>2018-04-18T18:45:00Z</date>
+            <homeTeamName>Hellas Verona FC</homeTeamName>
+            <matchday>33</matchday>
+            <odds null="true" />
+            <result>
+                <goalsAwayTeam null="true" />
+                <goalsHomeTeam null="true" />
+            </result>
+            <status>TIMED</status>
+        </element>
+        <element>
+            <_links>
+                <awayTeam>
+                    <href>http://api.football-data.org/v1/teams/115</href>
+                </awayTeam>
+                <competition>
+                    <href>http://api.football-data.org/v1/competitions/456</href>
+                </competition>
+                <homeTeam>
+                    <href>http://api.football-data.org/v1/teams/113</href>
+                </homeTeam>
+                <self>
+                    <href>http://api.football-data.org/v1/fixtures/163585</href>
+                </self>
+            </_links>
+            <awayTeamName>Udinese Calcio</awayTeamName>
+            <date>2018-04-18T18:45:00Z</date>
+            <homeTeamName>SSC Napoli</homeTeamName>
+            <matchday>33</matchday>
+            <odds null="true" />
+            <result>
+                <goalsAwayTeam null="true" />
+                <goalsHomeTeam null="true" />
+            </result>
+            <status>TIMED</status>
+        </element>
+        <element>
+            <_links>
+                <awayTeam>
+                    <href>http://api.football-data.org/v1/teams/107</href>
+                </awayTeam>
+                <competition>
+                    <href>http://api.football-data.org/v1/competitions/456</href>
+                </competition>
+                <homeTeam>
+                    <href>http://api.football-data.org/v1/teams/100</href>
+                </homeTeam>
+                <self>
+                    <href>http://api.football-data.org/v1/fixtures/163586</href>
+                </self>
+            </_links>
+            <awayTeamName>Genoa CFC</awayTeamName>
+            <date>2018-04-18T18:45:00Z</date>
+            <homeTeamName>AS Roma</homeTeamName>
+            <matchday>33</matchday>
+            <odds null="true" />
+            <result>
+                <goalsAwayTeam null="true" />
+                <goalsHomeTeam null="true" />
+            </result>
+            <status>TIMED</status>
+        </element>
+        <element>
+            <_links>
+                <awayTeam>
+                    <href>http://api.football-data.org/v1/teams/103</href>
+                </awayTeam>
+                <competition>
+                    <href>http://api.football-data.org/v1/competitions/456</href>
+                </competition>
+                <homeTeam>
+                    <href>http://api.football-data.org/v1/teams/584</href>
+                </homeTeam>
+                <self>
+                    <href>http://api.football-data.org/v1/fixtures/163587</href>
+                </self>
+            </_links>
+            <awayTeamName>Bologna FC</awayTeamName>
+            <date>2018-04-18T18:45:00Z</date>
+            <homeTeamName>UC Sampdoria</homeTeamName>
+            <matchday>33</matchday>
+            <odds null="true" />
+            <result>
+                <goalsAwayTeam null="true" />
+                <goalsHomeTeam null="true" />
+            </result>
+            <status>TIMED</status>
+        </element>
+        <element>
+            <_links>
+                <awayTeam>
+                    <href>http://api.football-data.org/v1/teams/106</href>
+                </awayTeam>
+                <competition>
+                    <href>http://api.football-data.org/v1/competitions/456</href>
+                </competition>
+                <homeTeam>
+                    <href>http://api.football-data.org/v1/teams/1107</href>
+                </homeTeam>
+                <self>
+                    <href>http://api.football-data.org/v1/fixtures/163588</href>
+                </self>
+            </_links>
+            <awayTeamName>AC Chievo Verona</awayTeamName>
+            <date>2018-04-18T18:45:00Z</date>
+            <homeTeamName>SPAL Ferrara</homeTeamName>
+            <matchday>33</matchday>
+            <odds null="true" />
+            <result>
+                <goalsAwayTeam null="true" />
+                <goalsHomeTeam null="true" />
+            </result>
+            <status>TIMED</status>
+        </element>
+        <element>
+            <_links>
+                <awayTeam>
+                    <href>http://api.football-data.org/v1/teams/98</href>
+                </awayTeam>
+                <competition>
+                    <href>http://api.football-data.org/v1/competitions/456</href>
+                </competition>
+                <homeTeam>
+                    <href>http://api.football-data.org/v1/teams/586</href>
+                </homeTeam>
+                <self>
+                    <href>http://api.football-data.org/v1/fixtures/163589</href>
+                </self>
+            </_links>
+            <awayTeamName>AC Milan</awayTeamName>
+            <date>2018-04-18T18:45:00Z</date>
+            <homeTeamName>Torino FC</homeTeamName>
+            <matchday>33</matchday>
+            <odds null="true" />
+            <result>
+                <goalsAwayTeam null="true" />
+                <goalsHomeTeam null="true" />
+            </result>
+            <status>TIMED</status>
+        </element>
+    </fixtures>
+</root>
