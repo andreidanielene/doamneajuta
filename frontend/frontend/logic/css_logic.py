@@ -10,3 +10,12 @@ def set_active_link(page):
         session['home'] = ''
         session['my_profile'] = ''
         session['external_products'] = ''
+
+
+# def show_hide_login():
+#     if session['status'] == 'login':
+#         session['logoutCss'] = 'display:none'
+#         session['loginCss'] = ''
+#     else:
+#         session['logoutCss'] = ''
+#         session['loginCss'] = 'display:none'

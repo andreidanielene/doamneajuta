@@ -1,8 +1,16 @@
-<div class="topnav" id="myTopnav">
-  <a href="{{ url_for('home')}}" class="{{session.home}}">Home</a>
-  <a href="{{ url_for('my_profile')}}" class="{{session.my_profile}}">My profile</a>
-  <a href="{{ url_for('external_products')}}" class="{{session.external_products}}">Other products</a>
-  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="navBarCollapse()">&#9776;</a>
-</div>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="{{ url_for('home') }}">Home</a></li>
+    </ul>
+    <div class="navbar-header navbar-right">
+      <a class="navbar-brand" href="#">{{ user }}</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
 
-<script src="/static/js/header.js"></script>
+      <li class="{{ login_css }}"><a href="{{ url_for('register') }}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li class="{{ login_css }}"><a href="{{ url_for('login') }}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <li class="{{ logout_css }}"><a href="{{ url_for('home_logout') }}"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+    </ul>
+  </div>
+</nav>

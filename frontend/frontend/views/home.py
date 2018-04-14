@@ -1,107 +1,119 @@
 from frontend import app
-from flask import render_template, session, request, redirect, url_for
-from frontend.logic.css_logic import set_active_link
+from flask import render_template, request, redirect, url_for
+from flask_googlemaps import Map
 import requests
 
 
-@app.route('/home')
+@app.route('/login')
+def login():
+    return render_template('/views/login.html', login_css='', logout_css='hidden')
+
+
+@app.route('/register')
+def register():
+    return render_template('/views/register.html', login_css='', logout_css='hidden')
+
+#
+# @app.route('/start_login')
+# def start_login():
+#     email = request.args.get('email')
+#     password = request.args.get('password')
+#     body = {
+#         'username': email,
+#         'password': password
+#     }
+#     #
+#     # r = requests.post('http://192.168.21.114:8090/login', json=body)
+#     #
+#     # print '============'
+#     # print r.json
+#     # session['user_details'] = r.json
+#     # print '=================username=='
+#     # print session['user_details']
+#
+#     return redirect('/home')
+
+
+@app.route("/home")
 def home():
-    set_active_link('home')
+    r = requests.get('http://192.168.21.114:8090/api/fixtures')
 
-    r = requests.get('http://192.168.0.103:8090/api/myproducts')
+    matches_details = r.json()
 
-    print r.json()
+    markers = []
+    for item in matches_details:
+        markers.append({
+            'icon': 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
+            'lat': item['latitudine'],
+            'lng': item['longitudine'],
+            'infobox': '{} - {}'.format(item['homeTeamName'], item['awayTeamName'])
+        })
 
-    products = r.json()
+    # creating a map in the view
+    sndmap = Map(
+        identifier="sndmap",
+        lat=43.1865402,
+        lng=14.2633723,
+        markers=markers,
+        style="height:400px;width:1024px;margin:0;",
+        zoom=7,
+        region="IT"
+    )
 
-    # products = [
-    #     {
-    #         'name': 'mar',
-    #         'quantity': '8 bucati',
-    #         'post_date': '12.02.2018',
-    #         'expiration_date': '12.02.2023'
-    #     },
-    #     {
-    #         'name': 'para',
-    #         'quantity': '10 bucati',
-    #         'post_date': '12.02.2018',
-    #         'expiration_date': '12.02.2023'
-    #     },
-    #     {
-    #         'name': 'lapte',
-    #         'quantity': '2 litri',
-    #         'post_date': '12.02.2018',
-    #         'expiration_date': '12.02.2023'
-    #     },
-    #     {
-    #         'name': 'carne',
-    #         'quantity': '6 kg',
-    #         'post_date': '12.02.2018',
-    #         'expiration_date': '12.02.2023'
-    #     }
-    # ]
-
-    return render_template('/views/home.html', data=products, session=session)
+    return render_template('views/home.html',
+                           sndmap=sndmap,
+                           login_css='hidden',
+                           logout_css='',
+                           matches=matches_details)
 
 
-@app.route('/')
-def index():
-    set_active_link('home')
+@app.route("/home_logout")
+def home_logout():
+    # creating a map in the view
+    sndmap = Map(
+        identifier="sndmap",
+        lat=44.4378043,
+        lng=26.0245982,
+        markers=[
+          {
+             'icon': 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
+             'lat': 44.447564,
+             'lng': 26.0500967,
+             'infobox': "<b>Hello World</b>"
+          }
+        ],
+        style="height:400px;width:1024px;margin:0;"
+    )
 
-    products = [
-        {
-            'name': 'mar',
-            'quantity': '8 bucati',
-            'post_date': '12.02.2018',
-            'expiration_date': '12.02.2023'
-        },
-        {
-            'name': 'para',
-            'quantity': '10 bucati',
-            'post_date': '12.02.2018',
-            'expiration_date': '12.02.2023'
-        },
-        {
-            'name': 'lapte',
-            'quantity': '2 litri',
-            'post_date': '12.02.2018',
-            'expiration_date': '12.02.2023'
-        },
-        {
-            'name': 'carne',
-            'quantity': '6 kg',
-            'post_date': '12.02.2018',
-            'expiration_date': '12.02.2023'
-        }
-    ]
-
-    return render_template('/views/home.html', data=products, session=session)
+    return render_template('views/test.html', sndmap=sndmap, login_css='', logout_css='hidden')
 
 
-@app.route('/share/<param>')
-def share(param):
+@app.route("/start_login")
+def start_login():
+    email = request.args.get('email')
+    password = request.args.get('password')
+    body = {
+        'username': email,
+        'password': password
+    }
 
-    # share request
-    requests.post('http://192.168.0.103:8090/api/updatestatus?id_product={}&status=share'.format(param))
+    r = requests.post('http://192.168.21.114:8090/login', json=body)
 
-    return redirect(url_for('home'))
+    # session['user_details'] = r.json()
+    # print '=================username=='
+    # print session['user_details']
 
-
-@app.route('/done/<param>')
-def done(param):
-
-    # done request
-    requests.post('http://192.168.0.103:8090/api/updatestatus?id_product={}&status=done'.format(param))
-
-    return redirect(url_for('home'))
-
-
-@app.route('/getsession')
-def get_session():
-    r = requests.get('http://192.168.0.103:8090/api/notificationday')
-    if r.json() == 1:
-        print r.json()
+    return redirect('/home')
 
 
-    return 'Done'
+@app.route("/start_register")
+def start_register():
+    email = request.args.get('email')
+    password = request.args.get('password')
+    name = request.args.get('name')
+    phone = request.args.get('phone')
+    city = request.args.get('city')
 
+    print '============='
+    print email
+    return 'works'
