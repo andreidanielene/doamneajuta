@@ -1,0 +1,535 @@
+POST: http://192.168.21.114:8090/login
+REQUEST:
+{
+	"username":"test@doamneajuta.ro",
+	"password":"test"
+}
+RESPONSE:
+{
+    "username": "test@doamneajuta.ro",
+    "password": "test",
+    "fullName": null,
+    "phone": null,
+    "town": null
+}
+------------------------------------------------------------------------------------------------------
+GET: http://192.168.21.114:8090/api/gethotels?location=-33.8670,151.1957
+RESPONSE:
+[
+    {
+        "name": "The Star",
+        "latitudine": -33.8675557,
+        "longitudine": 151.1947409,
+        "rating": 4.3
+    },
+    {
+        "name": "ibis Sydney Darling Harbour",
+        "latitudine": -33.871042,
+        "longitudine": 151.1978691,
+        "rating": 3.8
+    },
+    {
+        "name": "Novotel Sydney on Darling Harbour",
+        "latitudine": -33.8722417,
+        "longitudine": 151.1978693,
+        "rating": 4
+    },
+    {
+        "name": "Ovolo 1888 Darling Harbour",
+        "latitudine": -33.8726709,
+        "longitudine": 151.1970516,
+        "rating": 4.7
+    },
+    {
+        "name": "Hyatt Regency Sydney",
+        "latitudine": -33.869976,
+        "longitudine": 151.2034261,
+        "rating": 4.2
+    },
+    {
+        "name": "The Grace Hotel",
+        "latitudine": -33.86896410000001,
+        "longitudine": 151.2058908,
+        "rating": 4.2
+    },
+    {
+        "name": "Amora Hotel",
+        "latitudine": -33.864556,
+        "longitudine": 151.206286,
+        "rating": 4.4
+    },
+    {
+        "name": "The Langham Sydney",
+        "latitudine": -33.8605012,
+        "longitudine": 151.2035513,
+        "rating": 4.5
+    },
+    {
+        "name": "PARKROYAL Darling Harbour",
+        "latitudine": -33.873562,
+        "longitudine": 151.2035868,
+        "rating": 4.3
+    },
+    {
+        "name": "Lord Wolseley Hotel",
+        "latitudine": -33.8766734,
+        "longitudine": 151.1967207,
+        "rating": 4.4
+    },
+    {
+        "name": "The Westin Sydney",
+        "latitudine": -33.86781620000001,
+        "longitudine": 151.207752,
+        "rating": 4.4
+    },
+    {
+        "name": "Swissôtel Sydney",
+        "latitudine": -33.870665,
+        "longitudine": 151.2074421,
+        "rating": 4.4
+    },
+    {
+        "name": "QT Sydney",
+        "latitudine": -33.8708902,
+        "longitudine": 151.2074116,
+        "rating": 4.5
+    },
+    {
+        "name": "Shangri-La Hotel, Sydney",
+        "latitudine": -33.8612862,
+        "longitudine": 151.2065374,
+        "rating": 4.4
+    },
+    {
+        "name": "Radisson Blu Plaza Hotel Sydney",
+        "latitudine": -33.865418,
+        "longitudine": 151.2089167,
+        "rating": 4.4
+    },
+    {
+        "name": "Hilton Sydney",
+        "latitudine": -33.8718413,
+        "longitudine": 151.2078864,
+        "rating": 4.3
+    },
+    {
+        "name": "Sydney Harbour Marriott Hotel at Circular Quay",
+        "latitudine": -33.8627261,
+        "longitudine": 151.2092998,
+        "rating": 4.3
+    },
+    {
+        "name": "Meriton Suites Kent Street, Sydney",
+        "latitudine": -33.8758968,
+        "longitudine": 151.2055997,
+        "rating": 4.3
+    },
+    {
+        "name": "Sheraton on the Park",
+        "latitudine": -33.871535,
+        "longitudine": 151.2096311,
+        "rating": 4.4
+    },
+    {
+        "name": "Sofitel Sydney Wentworth",
+        "latitudine": -33.8655338,
+        "longitudine": 151.2110457,
+        "rating": 4.2
+    }
+]
+---------------------------------------------------------------------------------------------
+GET: http://192.168.21.114:8090/api/getpoi?location=-33.8670,151.1957
+RESPONSE:
+[
+    {
+        "name": "IG Solutions",
+        "latitudine": -33.866971,
+        "longitudine": 151.195875,
+        "rating": 0
+    },
+    {
+        "name": "Cuareadviser Clinic - Physio Healing",
+        "latitudine": -33.866971,
+        "longitudine": 151.195875,
+        "rating": 0
+    },
+    {
+        "name": "Biaggio Cafe",
+        "latitudine": -33.8669667,
+        "longitudine": 151.1958862,
+        "rating": 3.2
+    },
+    {
+        "name": "Marquee Sydney, Pirrama Rd",
+        "latitudine": -33.866927,
+        "longitudine": 151.1953871,
+        "rating": 0
+    },
+    {
+        "name": "Biaggio Cafe",
+        "latitudine": -33.8667062,
+        "longitudine": 151.1957844,
+        "rating": 0
+    },
+    {
+        "name": "Doltone House - Darling Island Wharf",
+        "latitudine": -33.8667062,
+        "longitudine": 151.1957844,
+        "rating": 4.3
+    },
+    {
+        "name": "Prova Reply",
+        "latitudine": -33.8667062,
+        "longitudine": 151.1957844,
+        "rating": 0
+    },
+    {
+        "name": "Signorelli Gastronomia",
+        "latitudine": -33.8667062,
+        "longitudine": 151.1957844,
+        "rating": 3.9
+    },
+    {
+        "name": "GPAL Financial services,LLC",
+        "latitudine": -33.8667062,
+        "longitudine": 151.1957844,
+        "rating": 0
+    },
+    {
+        "name": "The Century",
+        "latitudine": -33.8671288,
+        "longitudine": 151.195339,
+        "rating": 3.6
+    },
+    {
+        "name": "Sky Terrace",
+        "latitudine": -33.8673118,
+        "longitudine": 151.1954995,
+        "rating": 3.8
+    },
+    {
+        "name": "Workplace6",
+        "latitudine": -33.86665,
+        "longitudine": 151.195854,
+        "rating": 4.7
+    },
+    {
+        "name": "Black Bar",
+        "latitudine": -33.8671532,
+        "longitudine": 151.1952836,
+        "rating": 0
+    },
+    {
+        "name": "Google",
+        "latitudine": -33.8666199,
+        "longitudine": 151.1958527,
+        "rating": 4.2
+    },
+    {
+        "name": "USCIS Application Support Center",
+        "latitudine": -33.8666027,
+        "longitudine": 151.195854,
+        "rating": 0
+    },
+    {
+        "name": "Marquee Sydney, The Star",
+        "latitudine": -33.8674084,
+        "longitudine": 151.1954141,
+        "rating": 3.6
+    },
+    {
+        "name": "R & R Massage Therapy",
+        "latitudine": -33.8665349,
+        "longitudine": 151.195526,
+        "rating": 0
+    },
+    {
+        "name": "Casino Wharf",
+        "latitudine": -33.86697330000001,
+        "longitudine": 151.1963034,
+        "rating": 4
+    },
+    {
+        "name": "Doltone House - Darling Island",
+        "latitudine": -33.866489,
+        "longitudine": 151.1958561,
+        "rating": 3.8
+    },
+    {
+        "name": "Avanade Australia Pty Ltd",
+        "latitudine": -33.866489,
+        "longitudine": 151.1958561,
+        "rating": 5
+    }
+]
+-----------------------------------------------------------------------------------------------------
+GET: http://192.168.21.114:8090/api/fixtures
+RESPONSE:
+[
+    {
+        "homeTeamName": "FC Internazionale Milano",
+        "awayTeamName": "Cagliari Calcio",
+        "date": "2018-04-17T18:45:00Z",
+        "latitudine": 45.4781236,
+        "longitudine": 9.123961999999999,
+        "stadium": "San Siro Stadium"
+    },
+    {
+        "homeTeamName": "Benevento Calcio",
+        "awayTeamName": "Atalanta BC",
+        "date": "2018-04-18T16:00:00Z",
+        "latitudine": 0,
+        "longitudine": 0,
+        "stadium": "Stadio Ciro Vigorito"
+    },
+    {
+        "homeTeamName": "FC Crotone",
+        "awayTeamName": "Juventus Turin",
+        "date": "2018-04-18T18:45:00Z",
+        "latitudine": 0,
+        "longitudine": 0,
+        "stadium": "Stadio Ezio Scida"
+    },
+    {
+        "homeTeamName": "ACF Fiorentina",
+        "awayTeamName": "SS Lazio",
+        "date": "2018-04-18T18:45:00Z",
+        "latitudine": 0,
+        "longitudine": 0,
+        "stadium": "Stadio Artemio Franchi"
+    },
+    {
+        "homeTeamName": "Hellas Verona FC",
+        "awayTeamName": "US Sassuolo Calcio",
+        "date": "2018-04-18T18:45:00Z",
+        "latitudine": 0,
+        "longitudine": 0,
+        "stadium": "Stadio Marc'Antonio Bentegodi"
+    },
+    {
+        "homeTeamName": "SSC Napoli",
+        "awayTeamName": "Udinese Calcio",
+        "date": "2018-04-18T18:45:00Z",
+        "latitudine": 0,
+        "longitudine": 0,
+        "stadium": "Stadio San Paolo"
+    },
+    {
+        "homeTeamName": "AS Roma",
+        "awayTeamName": "Genoa CFC",
+        "date": "2018-04-18T18:45:00Z",
+        "latitudine": 0,
+        "longitudine": 0,
+        "stadium": "Stadio Olimpico"
+    },
+    {
+        "homeTeamName": "UC Sampdoria",
+        "awayTeamName": "Bologna FC",
+        "date": "2018-04-18T18:45:00Z",
+        "latitudine": 0,
+        "longitudine": 0,
+        "stadium": "Stadio Luigi Ferraris"
+    },
+    {
+        "homeTeamName": "SPAL Ferrara",
+        "awayTeamName": "AC Chievo Verona",
+        "date": "2018-04-18T18:45:00Z",
+        "latitudine": 0,
+        "longitudine": 0,
+        "stadium": "Stadio Paolo Mazza"
+    },
+    {
+        "homeTeamName": "Torino FC",
+        "awayTeamName": "AC Milan",
+        "date": "2018-04-18T18:45:00Z",
+        "latitudine": 0,
+        "longitudine": 0,
+        "stadium": "Stadio Olimpico Grande Torino"
+    }
+]
+--------------------------------------------------------------------------------------------------
+GET: http://192.168.21.114:8090/api/getexchangeratesymbols
+RESPONSE:
+{
+    "AED": "United Arab Emirates Dirham",
+    "AFN": "Afghan Afghani",
+    "ALL": "Albanian Lek",
+    "AMD": "Armenian Dram",
+    "ANG": "Netherlands Antillean Guilder",
+    "AOA": "Angolan Kwanza",
+    "ARS": "Argentine Peso",
+    "AUD": "Australian Dollar",
+    "AWG": "Aruban Florin",
+    "AZN": "Azerbaijani Manat",
+    "BAM": "Bosnia-Herzegovina Convertible Mark",
+    "BBD": "Barbadian Dollar",
+    "BDT": "Bangladeshi Taka",
+    "BGN": "Bulgarian Lev",
+    "BHD": "Bahraini Dinar",
+    "BIF": "Burundian Franc",
+    "BMD": "Bermudan Dollar",
+    "BND": "Brunei Dollar",
+    "BOB": "Bolivian Boliviano",
+    "BRL": "Brazilian Real",
+    "BSD": "Bahamian Dollar",
+    "BTC": "Bitcoin",
+    "BTN": "Bhutanese Ngultrum",
+    "BWP": "Botswanan Pula",
+    "BYN": "New Belarusian Ruble",
+    "BYR": "Belarusian Ruble",
+    "BZD": "Belize Dollar",
+    "CAD": "Canadian Dollar",
+    "CDF": "Congolese Franc",
+    "CHF": "Swiss Franc",
+    "CLF": "Chilean Unit of Account (UF)",
+    "CLP": "Chilean Peso",
+    "CNY": "Chinese Yuan",
+    "COP": "Colombian Peso",
+    "CRC": "Costa Rican Colón",
+    "CUC": "Cuban Convertible Peso",
+    "CUP": "Cuban Peso",
+    "CVE": "Cape Verdean Escudo",
+    "CZK": "Czech Republic Koruna",
+    "DJF": "Djiboutian Franc",
+    "DKK": "Danish Krone",
+    "DOP": "Dominican Peso",
+    "DZD": "Algerian Dinar",
+    "EGP": "Egyptian Pound",
+    "ERN": "Eritrean Nakfa",
+    "ETB": "Ethiopian Birr",
+    "EUR": "Euro",
+    "FJD": "Fijian Dollar",
+    "FKP": "Falkland Islands Pound",
+    "GBP": "British Pound Sterling",
+    "GEL": "Georgian Lari",
+    "GGP": "Guernsey Pound",
+    "GHS": "Ghanaian Cedi",
+    "GIP": "Gibraltar Pound",
+    "GMD": "Gambian Dalasi",
+    "GNF": "Guinean Franc",
+    "GTQ": "Guatemalan Quetzal",
+    "GYD": "Guyanaese Dollar",
+    "HKD": "Hong Kong Dollar",
+    "HNL": "Honduran Lempira",
+    "HRK": "Croatian Kuna",
+    "HTG": "Haitian Gourde",
+    "HUF": "Hungarian Forint",
+    "IDR": "Indonesian Rupiah",
+    "ILS": "Israeli New Sheqel",
+    "IMP": "Manx pound",
+    "INR": "Indian Rupee",
+    "IQD": "Iraqi Dinar",
+    "IRR": "Iranian Rial",
+    "ISK": "Icelandic Króna",
+    "JEP": "Jersey Pound",
+    "JMD": "Jamaican Dollar",
+    "JOD": "Jordanian Dinar",
+    "JPY": "Japanese Yen",
+    "KES": "Kenyan Shilling",
+    "KGS": "Kyrgystani Som",
+    "KHR": "Cambodian Riel",
+    "KMF": "Comorian Franc",
+    "KPW": "North Korean Won",
+    "KRW": "South Korean Won",
+    "KWD": "Kuwaiti Dinar",
+    "KYD": "Cayman Islands Dollar",
+    "KZT": "Kazakhstani Tenge",
+    "LAK": "Laotian Kip",
+    "LBP": "Lebanese Pound",
+    "LKR": "Sri Lankan Rupee",
+    "LRD": "Liberian Dollar",
+    "LSL": "Lesotho Loti",
+    "LTL": "Lithuanian Litas",
+    "LVL": "Latvian Lats",
+    "LYD": "Libyan Dinar",
+    "MAD": "Moroccan Dirham",
+    "MDL": "Moldovan Leu",
+    "MGA": "Malagasy Ariary",
+    "MKD": "Macedonian Denar",
+    "MMK": "Myanma Kyat",
+    "MNT": "Mongolian Tugrik",
+    "MOP": "Macanese Pataca",
+    "MRO": "Mauritanian Ouguiya",
+    "MUR": "Mauritian Rupee",
+    "MVR": "Maldivian Rufiyaa",
+    "MWK": "Malawian Kwacha",
+    "MXN": "Mexican Peso",
+    "MYR": "Malaysian Ringgit",
+    "MZN": "Mozambican Metical",
+    "NAD": "Namibian Dollar",
+    "NGN": "Nigerian Naira",
+    "NIO": "Nicaraguan Córdoba",
+    "NOK": "Norwegian Krone",
+    "NPR": "Nepalese Rupee",
+    "NZD": "New Zealand Dollar",
+    "OMR": "Omani Rial",
+    "PAB": "Panamanian Balboa",
+    "PEN": "Peruvian Nuevo Sol",
+    "PGK": "Papua New Guinean Kina",
+    "PHP": "Philippine Peso",
+    "PKR": "Pakistani Rupee",
+    "PLN": "Polish Zloty",
+    "PYG": "Paraguayan Guarani",
+    "QAR": "Qatari Rial",
+    "RON": "Romanian Leu",
+    "RSD": "Serbian Dinar",
+    "RUB": "Russian Ruble",
+    "RWF": "Rwandan Franc",
+    "SAR": "Saudi Riyal",
+    "SBD": "Solomon Islands Dollar",
+    "SCR": "Seychellois Rupee",
+    "SDG": "Sudanese Pound",
+    "SEK": "Swedish Krona",
+    "SGD": "Singapore Dollar",
+    "SHP": "Saint Helena Pound",
+    "SLL": "Sierra Leonean Leone",
+    "SOS": "Somali Shilling",
+    "SRD": "Surinamese Dollar",
+    "STD": "São Tomé and Príncipe Dobra",
+    "SVC": "Salvadoran Colón",
+    "SYP": "Syrian Pound",
+    "SZL": "Swazi Lilangeni",
+    "THB": "Thai Baht",
+    "TJS": "Tajikistani Somoni",
+    "TMT": "Turkmenistani Manat",
+    "TND": "Tunisian Dinar",
+    "TOP": "Tongan Paʻanga",
+    "TRY": "Turkish Lira",
+    "TTD": "Trinidad and Tobago Dollar",
+    "TWD": "New Taiwan Dollar",
+    "TZS": "Tanzanian Shilling",
+    "UAH": "Ukrainian Hryvnia",
+    "UGX": "Ugandan Shilling",
+    "USD": "United States Dollar",
+    "UYU": "Uruguayan Peso",
+    "UZS": "Uzbekistan Som",
+    "VEF": "Venezuelan Bolívar Fuerte",
+    "VND": "Vietnamese Dong",
+    "VUV": "Vanuatu Vatu",
+    "WST": "Samoan Tala",
+    "XAF": "CFA Franc BEAC",
+    "XAG": "Silver (troy ounce)",
+    "XAU": "Gold (troy ounce)",
+    "XCD": "East Caribbean Dollar",
+    "XDR": "Special Drawing Rights",
+    "XOF": "CFA Franc BCEAO",
+    "XPF": "CFP Franc",
+    "YER": "Yemeni Rial",
+    "ZAR": "South African Rand",
+    "ZMK": "Zambian Kwacha (pre-2013)",
+    "ZMW": "Zambian Kwacha",
+    "ZWL": "Zimbabwean Dollar"
+}
+-------------------------------------------------------------------------------------------
+GET: http://192.168.21.114:8090/api/getexchangerate?base=EUR&symbols=GBP,JPY,USD,RON
+RESPONSE:
+{
+    "base": "EUR",
+    "date": "2018-04-14",
+    "rates": {
+        "GBP": 0.866613,
+        "JPY": 132.395561,
+        "USD": 1.233648,
+        "RON": 4.659369
+    }
+}
